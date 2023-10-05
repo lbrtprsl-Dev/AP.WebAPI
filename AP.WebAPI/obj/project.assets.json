@@ -88,6 +88,36 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "APWebAPI.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/APWebAPI.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APWebAPI.Application.dll": {}
+        }
+      },
+      "APWebAPI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/APWebAPI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APWebAPI.Domain.dll": {}
+        }
+      },
+      "APWebAPI.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/APWebAPI.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APWebAPI.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -429,10 +459,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "APWebAPI.Application/1.0.0": {
+      "type": "project",
+      "path": "../APWebAPI.Application/APWebAPI.Application.csproj",
+      "msbuildProject": "../APWebAPI.Application/APWebAPI.Application.csproj"
+    },
+    "APWebAPI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../APWebAPI.Domain/APWebAPI.Domain.csproj",
+      "msbuildProject": "../APWebAPI.Domain/APWebAPI.Domain.csproj"
+    },
+    "APWebAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../APWebAPI.Infrastructure/APWebAPI.Infrastructure.csproj",
+      "msbuildProject": "../APWebAPI.Infrastructure/APWebAPI.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "APWebAPI.Application >= 1.0.0",
+      "APWebAPI.Domain >= 1.0.0",
+      "APWebAPI.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -469,7 +517,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Application\\APWebAPI.Application.csproj": {
+              "projectPath": "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Application\\APWebAPI.Application.csproj"
+            },
+            "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Domain\\APWebAPI.Domain.csproj": {
+              "projectPath": "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Domain\\APWebAPI.Domain.csproj"
+            },
+            "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Infrastructure\\APWebAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\APTest\\API\\AP.WebAPI\\APWebAPI.Infrastructure\\APWebAPI.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
